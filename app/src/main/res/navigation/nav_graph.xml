@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentFeed">
+
+    <fragment
+        android:id="@+id/fragmentFeed"
+        android:name="com.example.NarutoWiki.FragmentFeed"
+        android:label="fragment_feed"
+        tools:layout="@layout/fragment_feed" >
+        <action
+            android:id="@+id/action_fragmentFeed_to_fragmentPerfil"
+            app:destination="@id/fragmentPerfil"
+            app:popUpTo="@id/fragmentFeed" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPerfil"
+        android:name="com.example.NarutoWiki.FragmentPerfil"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" >
+        <action
+            android:id="@+id/action_fragmentPerfil_to_fragmentFeed"
+            app:destination="@id/fragmentFeed" />
+    </fragment>
+</navigation>
